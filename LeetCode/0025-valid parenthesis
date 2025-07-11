@@ -1,0 +1,32 @@
+// import java.util.Stack;
+// import java.util.HashMap;
+
+class Solution {
+    public boolean isValid(String s) {
+        // Stack to hold opening brackets
+        Stack<Character> stack = new Stack<>();
+        
+        // Map to hold the matching pairs of brackets
+        HashMap<Character, Character> pairs = new HashMap<>();
+        pairs.put(')', '(');
+        pairs.put('}', '{');
+        pairs.put(']', '[');
+
+        // Loop through each character in the string
+        for (char c : s.toCharArray()) {
+            // If it's a closing bracket
+            if (pairs.containsKey(c)) {
+                // If the stack is empty or the top of the stack doesn't match the opening bracket
+                if (stack.isEmpty() || stack.pop() != pairs.get(c)) {
+                    return false;
+                }
+            } else {
+                // If it's an opening bracket, push it onto the stack
+                stack.push(c);
+            }
+        }
+
+        // If the stack is empty, all brackets are matched
+        return stack.isEmpty();
+    }
+}
