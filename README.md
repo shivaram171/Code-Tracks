@@ -7,7 +7,5 @@ This repository contains my personal coding solutions from various competitive p
 ## 📌 Platforms
 
 - [LeetCode](./LeetCode)
-- [Codeforces](./Codeforces)
-- [HackerRank](./HackerRank)
 - [GeeksForGeeks](./GFG)
-
+- [HackerRank](./HackerRank)
